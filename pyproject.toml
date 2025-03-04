@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LLMGraphTransformer"
+version = "0.0.1"
+description = "A powerful tool for transforming documents into graph-based structures using Large Language Models (LLMs)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["LLM", "graph transformation", "machine learning", "document processing", "natural language processing","text to graph","document to graph"]
+dependencies = [
+    "json-repair",
+    "langchain_core",
+    "pydantic"
+]
+
+[project.urls]
+Homepage = "https://github.com/dhiaaeddine16/LLMGraphTransformer"
+
+[tool.setuptools]
+packages = { find = { where = ["src"] } }
