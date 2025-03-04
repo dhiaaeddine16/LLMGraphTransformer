@@ -14,9 +14,10 @@ pip install LLMGraphTransformer
 ### 📥 Importing the Required Modules
 ```python
 from LLMGraphTransformer import LLMGraphTransformer
+from LLMGraphTransformer.schema import NodeSchema, RelationshipSchema
 from langchain_openai import ChatOpenAI
 from langchain_core.documents import Document
-from LLMGraphTransformer.schema import NodeSchema, RelationshipSchema
+
 
 from dotenv import load_dotenv
 import os
