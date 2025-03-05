@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "LLMGraphTransformer"
-version = "0.0.1"
+version = "0.0.2"
 description = "A powerful tool for transforming documents into graph-based structures using Large Language Models (LLMs)."
 readme = "README.md"
 requires-python = ">=3.10"
