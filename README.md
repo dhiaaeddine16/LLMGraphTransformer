@@ -117,7 +117,7 @@ The extracted knowledge graph will be represented in JSON format with `nodes` an
 {
   "nodes": [
     {
-      "id": "MARIE_CURIE",
+      "id": "Marie Curie",
       "type": "Person",
       "properties": {
         "name": "Marie Curie",
@@ -130,8 +130,8 @@ The extracted knowledge graph will be represented in JSON format with `nodes` an
   ],
   "relationships": [
     {
-      "source": "MARIE_CURIE",
-      "target": "PIERRE_CURIE",
+      "source": "Marie Curie",
+      "target": "Pierre Curie",
       "type": "SPOUSE_OF"
     },
     ...
