@@ -4,7 +4,7 @@ from langchain_core.documents import Document
 from langchain_core.load.serializable import Serializable
 
 class NodeSchema:
-    def __init__(self, type: str, properties: List[str]= ["name"], description: str= ""):
+    def __init__(self, type: str, properties: List[str]= [], description: str= ""):
         self.type = type
         self.description = description 
         self.properties = properties 
