@@ -6,6 +6,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableConfig
 from LLMGraphTransformer.prompt_generation import generate_prompt
 from LLMGraphTransformer.schema import NodeSchema, RelationshipSchema, Node, Relationship, GraphDocument
+import logging
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_NODE_TYPE = "Node"
 
@@ -37,10 +40,15 @@ def _format_graph(nodes: List[Node], relationships: List[Relationship]):
 
 def process_properties(props: Dict[str, List[str]]) -> Dict[str, Union[str, List[str]]]:
     """Process a properties dictionary:
+       - If properties is not a dictionary, replace it with an empty dictionary
        - Remove keys where the value is an empty list.
        - If the value is a list of length 1, replace it with its single element.
     """
     keys_to_delete = []
+    if not isinstance(props, dict):
+        logger.warning("Malformed properties: expected dict, got %s", type(props))
+        return {}
+
     for key, value in list(props.items()):
         if isinstance(value, list):
             if len(value) == 0:
